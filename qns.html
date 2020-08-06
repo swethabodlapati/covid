@@ -68,11 +68,17 @@
     <input type="radio" name="one" value="Yes" style="text-align:center;color:black">Yes 
     <input type="radio" name="one" value="No" style="text-align:center;color:black">No
   </div>
-  <h3>3.Are you facing these problems like body aches, headache, new loss of taste or smell, sore throat,Experincing fatigue?</h3>
+  <h3>3.Are you facing these problems like body aches, headache, new loss of taste or smell, sore throat?</h3>
   <div class="text-center" style="font-size: 20px;color:black">
     <input type="radio" name="three" value="Yes" style="text-align:center;color:black">Yes 
     <input type="radio" name="three" value="No" style="text-align:center;color:black">No
   </div>
+	<h3>4.Are you Experincing fatigue?</h3>
+	<div class="text-center" style="font-size: 20px;color:black">
+    		<input type="radio" name="three" value="Yes" style="text-align:center;color:black">Yes 
+    		<input type="radio" name="three" value="No" style="text-align:center;color:black">No
+  	</div>
+	
 <!--image-->
 
 
@@ -101,7 +107,7 @@
                         }
                   }
             } 
-            if (c>=2){
+            if (c>=3){
               document.getElementById("result").innerHTML=r.fontsize(6);
             }
             else{
