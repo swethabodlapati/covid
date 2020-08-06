@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Covid</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="C:\Users\DELL\Desktop\test\cstyle.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  </head>
+<body>
+	<header>
+  		<nav id="header-nav" class="navbar navbar-default">
+  			<div class="container">
+  				<div class="navbar-header">
+  					<a href="covidtest.html" class="pull-left visible-md visible-lg">
+  						<div id="logo-img" style="color:black">&#9937;</div>
+          			</a>
+          			<div class="navbar-brand">
+          				<a href="covidtest.html"><h1>C19(Covid Test)</h1></a>
+          				<p>
+          					<span style='font-size:20px; color:black'>&#9733; prevention is better than cure &#9733;</span>
+            			</p>
+          			</div>
+        		</div>
+        		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+        			<span class="sr-only">Toggel navigation</span>
+          			<span class="icon-bar"></span>
+          			<span class="icon-bar"></span>
+          			<span class="icon-bar"></span>
+        		</button>
+        		<div id="collapsable-nav" class="collapse navbar-collapse">
+        			<ul id="nav-list" class="nav navbar-nav navbar-right">
+                <li>
+                  <a href="ctest.html">
+                    <span class="fas fa-home" style='font-size:40px;color:black'></span><br> Home</a>
+                </li>
+              			<li>
+                			<a href="help.html">
+                  				<span style='font-size:40px;color:black' class='fas'>&#xf0d1;</span><br class="hidden-xs"> *Helpline
+                  		</a>
+                		</li>
+                    <li>
+                      <a href="https://www.who.int/health-topics/coronavirus#tab=tab_1">
+                        <span style='font-size:40px;color:black'class="fas fa-angle-double-right"></span><br class="hidden-xs" style="color:black">About Virus
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://kidshealth.org/en/parents/coronavirus-stop-spread.html">
+                        <span class="fas" style='font-size:40px;color:black'>&#9888;</span><br style="color:black"> Precautions</a>
+                    </li>
+              		</ul>
+            	</div>
+        	</div>
+    	</nav>
+    </header>
+    <h2>Answer the following questions:</h2>
+    <h3>   1. Have you come into close contact (within 6 feet) with someone who has a laboratory confirmed COVID – 19 diagnosis in the past 14 days?</h3>
+  <div class="text-center" style="font-size: 20px;color:black">
+    <input type="radio" name="done" value="Yes" style="text-align:center;color:black">Yes
+    <input type="radio" name="done" value="No" style="text-align:center;color:black">No
+  </div>
+  <br>
+  <h3>  2. Are you facing problems like fever or chills, cough, shortness of breath or difficulty breathing?body aches, headache, new loss of taste or smell, sore throat?</h3>
+  <div class="text-center" style="font-size: 20px;color:black">
+    <input type="radio" name="one" value="Yes" style="text-align:center;color:black">Yes 
+    <input type="radio" name="one" value="No" style="text-align:center;color:black">No
+  </div>
+  <h3>3.Are You Experincing fatigue?</h3>
+  <div class="text-center" style="font-size: 20px;color:black">
+    <input type="radio" name="two" value="Yes" style="text-align:center;color:black">Yes 
+    <input type="radio" name="two" value="No" style="text-align:center;color:black">No
+  </div>
+  <h3>4.Are you facing these problems like body aches, headache, new loss of taste or smell, sore throat?</h3>
+  <div class="text-center" style="font-size: 20px;color:black">
+    <input type="radio" name="three" value="Yes" style="text-align:center;color:black">Yes 
+    <input type="radio" name="three" value="No" style="text-align:center;color:black">No
+  </div>
+<!--image-->
+
+
+<button type="button" style="background-color:black;margin-left:auto;margin-right:auto;display:block; " onclick="displayRadioValue()">Submit
+</button> 
+  <br> 
+
+      
+    <div id="result" class="text-center" style="font-size: 20px;"></div> 
+    <script> 
+        function displayRadioValue() { 
+            document.getElementById("result").innerHTML = ""; 
+            var ele = document.getElementsByTagName('input'); 
+            var s="Your risk of having COVID-19 is Low.You are alright.Stay Home,Stay Safe!";
+            var st="Your risk of having COVID-19 is High.Hope you are not alright.Go for the test.Stay Home,Stay Safe!";
+            var r=st.fontcolor("red");
+            var rt=s.fontcolor("green");
+            c=0 
+            for(i = 0; i < ele.length; i++) { 
+                  
+                if(ele[i].type="radio") { 
+                  
+                    if(ele[i].checked) 
+                        if(ele[i].value==="Yes"){
+                          c=c+1
+                        }
+                  }
+            } 
+            if (c>=3){
+              document.getElementById("result").innerHTML=r.fontsize(6);
+            }
+            else{
+              document.getElementById("result").innerHTML=rt.fontsize(6);
+            }
+        } 
+
+    </script> 
+    <footer class="panel-footer">
+      <div class="container">
+        <div class="row">
+          <section id="hours" class="col-sm-4">
+            <span>Contact us:</span><br>
+                Ph:+91-08662410978.
+
+                <hr class="visible-xs">
+            </section>
+            <section id="address" class="col-sm-4">
+                <span>Powered By:</span><br>
+                 &#64;Swetha Bodlapati
+                <hr class="visible-xs">
+            </section>
+            <section id="testimonials" class="col-sm-4">
+                <p>"This test will let you know to proceed to the text or not!</p>
+                <p>"Follow the precautions to avoid this virus"</p>
+                <p> Stay home,Stay Safe!</p>
+            </section>
+          </div>
+
+      </div>      
+    </div>
+  </footer>
+  
+  <script src="jquery-2.1.4.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
